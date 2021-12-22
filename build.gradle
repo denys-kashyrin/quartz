@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.quartz'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework:spring-context-support'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'org.apache.commons:commons-collections4:4.3'
+    implementation 'org.liquibase:liquibase-core'
+    implementation 'com.h2database:h2:1.4.185'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testng:testng:6.1.1'
+}
+
+test {
+    useJUnitPlatform()
+}
