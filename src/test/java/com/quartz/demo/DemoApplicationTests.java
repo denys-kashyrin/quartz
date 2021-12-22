@@ -1,13 +1,11 @@
 package com.quartz.demo;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import com.quartz.demo.job.SampleJob;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.junit.jupiter.api.Test;
-import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDataMap;
 import org.quartz.JobDetail;
@@ -16,7 +14,6 @@ import org.quartz.SchedulerException;
 import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
-import org.quartz.impl.SchedulerRepository;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,10 +21,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 
-import java.io.File;
-import java.net.URL;
 import java.util.Date;
-import java.util.List;
 
 @SpringBootTest
 @ActiveProfiles("test")
