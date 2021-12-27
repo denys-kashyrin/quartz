@@ -91,6 +91,5 @@ class DemoApplicationTests
             }
         });
         assertEquals(0, scheduler.getJobGroupNames().size());
-        scheduler.shutdown();
     }
 }
