@@ -21,7 +21,9 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -31,6 +33,31 @@ class DemoApplicationTests
 
     @Autowired
     private Scheduler scheduler;
+
+    @Test
+    void tets(){
+        int[] arr = {10, 20, 30, 40, 50};
+
+
+        int from = 0;
+        int to = 2;
+
+        final long start3 = System.nanoTime();
+        int sum = 0;
+
+        int res = Arrays.binarySearch(arr, from, to, arr.length);
+
+
+        for (int v: arr) {
+            sum += v;
+        }
+        final long end3 = System.nanoTime();
+
+
+        System.out.println("now: " + sum);
+        System.out.println("time is: " + (end3 - start3));
+
+    }
 
     @Test
     void contextLoads() throws SchedulerException, InterruptedException {
